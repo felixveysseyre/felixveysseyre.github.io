@@ -1,0 +1,72 @@
+{
+	"name": "online-curriculum-vitae",
+	"version": "2.0.0",
+	"description": "Online curriculum vitae",
+	"license": "MIT",
+	"author": "Félix Veysseyre (felix.veysseyre@gmail.com)",
+	"scripts": {
+		"build-dev": "webpack --mode development",
+		"build-dev-auto": "webpack --mode development --watch",
+		"build-prod": "webpack --mode production"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.2.3",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-react-transform": "^3.0.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-runtime": "^6.26.0",
+		"classnames": "^2.2.5",
+		"cross-env": "^5.1.4",
+		"css-loader": "^0.28.11",
+		"eslint": "^4.19.1",
+		"eslint-loader": "^2.0.0",
+		"eslint-plugin-react": "^7.7.0",
+		"expose-loader": "^0.7.5",
+		"file-loader": "^1.1.11",
+		"less": "^3.0.1",
+		"less-loader": "^4.1.0",
+		"prop-types": "^15.6.1",
+		"react": "^16.3.1",
+		"react-dom": "^16.3.1",
+		"react-fa": "^5.0.0",
+		"react-transform-hmr": "^1.0.4",
+		"style-loader": "^0.20.3",
+		"url-loader": "^1.0.1",
+		"webpack": "^4.5.0",
+		"webpack-cli": "^2.0.14"
+	},
+	"bin": {},
+	"babel": {
+		"presets": [
+			"env",
+			"react"
+		]
+	},
+	"eslintConfig": {
+		"parser": "babel-eslint",
+		"plugins": [
+			"react"
+		],
+		"env": {
+			"browser": true
+		},
+		"rules": {
+			"no-console": [
+				0
+			],
+			"no-extra-semi": [
+				0
+			],
+			"no-undef": [
+				0
+			]
+		},
+		"extends": [
+			"eslint:recommended",
+			"plugin:react/recommended"
+		]
+	}
+}
