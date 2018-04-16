@@ -44,6 +44,76 @@
 	var containerId = 'root';
 
 	var configuration = {
+		coverImageURL: './images/cover.jpg',
+		fullName: 'Félix Veysseyre',
+		title: 'Full stack web developer',
+		degree: 'Engineering degree in computer science and applied mathematics',
+		pictureURL: './images/picture.jpg',
+		information: [
+			{
+				icon: 'envelope',
+				label: 'Email',
+				text: 'felix.veysseyre@gmail.com',
+			},
+			{
+				icon: 'institution',
+				label: 'Company',
+				text: 'Kitware, Inc.',
+			},
+			{
+				icon: 'map-marker',
+				label: 'Location',
+				text: 'Lyon, FR',
+			},
+			{
+				icon: 'globe',
+				label: 'Nationality',
+				text: 'French',
+			},
+			{
+				icon: 'birthday-cake',
+				label: 'Age',
+				text: '26',
+			},
+		],
+		networks: [
+			{
+				icon: 'envelope',
+				name: 'Email',
+				URL: 'mailto:felix.veysseyre@gmail.com',
+				tooltip: 'Send me an email'
+			},
+			{
+				icon: 'cloud-download',
+				name: 'Download resume',
+				URL: 'file/CV - Félix Veysseyre - EN.pdf',
+				tooltip: 'Download my resume'
+			},
+			{
+				icon: 'linkedin',
+				name: 'LinkedIn',
+				URL: 'https://fr.linkedin.com/in/felix-veysseyre',
+				tooltip: 'LinkedIn'
+			},
+			{
+				icon: 'github',
+				name: 'GitHub',
+				URL: 'https://github.com/felixveysseyre',
+				tooltip: 'GitHub'
+			},
+			{
+				icon: 'stack-overflow',
+				name: 'StackOverflow',
+				URL: 'https://stackoverflow.com/users/3483406/félix-veysseyre',
+				tooltip: 'StackOverflow'
+			},
+			{
+				icon: 'instagram',
+				name: 'Instagram',
+				URL: 'https://www.instagram.com/flx.vsr',
+				tooltip: 'Instagram'
+			},
+		]
 	};
 
 	var app = new Home.App(containerId, configuration);

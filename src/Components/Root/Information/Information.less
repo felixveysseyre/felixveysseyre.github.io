@@ -1,0 +1,102 @@
+/* Imports */
+
+@import '../../Root/Root.less';
+
+/* Variables */
+
+/* Style definitions */
+
+.Information
+{
+	width: 100%;
+
+	table
+	{
+		width: 100%;
+		border-collapse: collapse;
+
+		tr
+		{
+			td
+			{
+				padding: 0px;
+
+				&.information
+				{
+					padding: 35px 0px 0px 35px;
+					vertical-align: top;
+
+					p
+					{
+						margin: 0px 0px 5px 0px;
+
+						&.fullName
+						{
+							color: @blue;
+							font-size: 30px;
+						}
+
+						&.titleAndDegree
+						{
+							color: @black;
+							font-size: 14px;
+						}
+					}
+
+					ul
+					{
+						list-style: none;
+						padding: 0px;
+						margin: 0px;
+
+						li
+						{
+							padding: 3px 15px 3px 0px;
+							font-size: 12px;
+
+							.label
+							{
+								display: inline-block;
+								width: 100px;
+								margin-right: 5px;
+								font-weight: bold;
+
+								.icon
+								{
+									margin-right: 5px;
+								}
+							}
+
+							.text
+							{
+								color: @blue;
+							}
+						}
+					}
+				}
+
+				&.picture
+				{
+					width: 375px;
+					height: 250px;
+					text-align: right;
+
+					.image
+					{
+						height: 250px;
+					}
+
+					.separation
+					{
+						position: absolute;border-style: solid;
+						border-width: 250px 0px 0px 75px;
+						border-top-color: transparent;
+						border-right-color: transparent;
+						border-bottom-color: transparent;
+						border-left-color: @white;
+					}
+				}
+			}
+		}
+	}
+}
