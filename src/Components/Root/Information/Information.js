@@ -21,7 +21,7 @@ export default class Information extends Component {
 
 		const element = (
 			<div className="Information">
-				<table>
+				<table className="informationAndPicture">
 					<tbody>
 						<tr>
 							<td className="information">
@@ -67,6 +67,27 @@ export default class Information extends Component {
 						</tr>
 					</tbody>
 				</table>
+				<ul className="networks">
+					{
+						this.props.networks.map((network, index) => {
+							return (
+								<li
+									key={index}
+									tooltip={network.tooltip}
+								>
+									<a
+										href={network.URL}
+										target="_blank"
+									>
+										<Icon
+											name={network.icon}
+										/>
+									</a>
+								</li>
+							);
+						})
+					}
+				</ul>
 			</div>
 		);
 
