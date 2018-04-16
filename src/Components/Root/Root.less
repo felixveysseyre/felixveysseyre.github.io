@@ -4,20 +4,27 @@
 
 @red: #ed5564;
 @darkRed: darken(@red, 5%);
+@lightRed: lighten(@red, 5%);
 @orange: #fb6e52;
 @darkOrange: darken(@orange, 5%);
+@lightOrange: lighten(@orange, 5%);
 @yellow: #ffeb3b;
 @darkYellow: darken(@yellow, 5%);
+@lightYellow: lighten(@yellow, 5%);
 @green: #48cfae;
 @darkGreen: darken(@green, 5%);
+@lightGreen: lighten(@green, 5%);
 @turquoise: #22a3a9;
 @darkTurquoise: darken(@turquoise, 5%);
+@lightTurquoise: lighten(@turquoise, 5%);
 @blue: #2e8bda;
 @darkBlue: darken(@blue, 5%);
+@lightBlue: lighten(@blue, 5%);
 @white: #ffffff;
 @offWhite: #f9f9f9;
 @cobalt: #1c2541;
-@cobaltDark: darken(@cobalt, 5%);
+@darkCobalt: darken(@cobalt, 5%);
+@lightCobalt: lighten(@cobalt, 5%);
 @darkGrey: #212429;
 @black: #000000;
 
@@ -29,8 +36,10 @@
 @blackSemiTransparentDark: rgba(0, 0, 0, 0.75);
 
 @fontFamily: Arial;
-@fontSizeNormal: 16px;
-@fontSizeSmall: 14px;
+@fontSizeExtraLarge: 30px;
+@fontSizeLarge: 16px;
+@fontSizeMedium: 14px;
+@fontSizeSmall: 12px;
 
 @boxShadow: 0px 1px 5px 0px @blackSemiTransparentLight;
 
@@ -50,7 +59,7 @@
 	width: 100%;
 	background: @offWhite;
 	font-family: @fontFamily;
-	font-size: @fontSizeNormal;
+	font-size: @fontSizeMedium;
 
 	/* Tooltip */
 
@@ -93,7 +102,7 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			color: @white;
-			font-size: @fontSizeSmall;
+			font-size: @fontSizeMedium;
 			background: @tooltipContainerColor;
 			border-radius: 2px;
 			box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
