@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import Block from '../Helpers/Block/Block.js';
+import SectionSeparator from '../Helpers/SectionSeparator/SectionSeparator.js';
+
 import Cover from './Cover/Cover.js';
 import Main from './Main/Main.js';
-import Block from './Block/Block.js';
 import Information from './Information/Information.js';
+import Resume from './Resume/Resume.js';
 
 import './Root.less';
 
@@ -46,11 +49,30 @@ export default class Root extends Component {
 			</Block>
 		);
 
+		/** Resume */
+
+		const resumeSeparator = (
+			<SectionSeparator>
+				Resume
+			</SectionSeparator>
+		);
+
+		const resume = (
+			<Block>
+				<Resume
+					resume={this.props.configuration.resume}
+					resumeFilePath={this.props.configuration.resumeFilePath}
+				/>
+			</Block>
+		);
+
 		/** Main **/
 
 		const main = (
 			<Main>
 				{information}
+				{resumeSeparator}
+				{resume}
 			</Main>
 		);
 

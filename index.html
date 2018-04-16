@@ -2,121 +2,129 @@
 
 <html>
 
-<!-- Head -->
+	<!-- Head -->
 
-<head>
-	<title>Félix VEYSSEYRE, full stack web developer</title>
+	<head>
+		<title>Félix VEYSSEYRE, full stack web developer</title>
 
-	<!-- Metadata -->
+		<!-- Metadata -->
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Hello, my name is Félix VEYSSEYRE and I am a full stack web developer. I have an engineering degree in computer science with a major in applied mathematics."/>
-	<meta name="keywords" content="félix, veysseyre, full, stack, web, developer, engineer, applied, mathematics"/>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Hello, my name is Félix VEYSSEYRE and I am a full stack web developer. I have an engineering degree in computer science with a major in applied mathematics."/>
+		<meta name="keywords" content="félix, veysseyre, full, stack, web, developer, engineer, applied, mathematics"/>
 
-	<!-- Style -->
+		<!-- Style -->
 
-	<style>
-		body
-		{
-			margin: 0px;
-		}
-
-		#root
-		{
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
-	</style>
-
-	<!-- Javascript -->
-
-	<script src="./dist/App.js"></script>
-</head>
-
-<!-- Body -->
-
-<body>
-<div id="root"></div>
-
-<script>
-	var containerId = 'root';
-
-	var configuration = {
-		coverImageURL: './images/cover.jpg',
-		fullName: 'Félix Veysseyre',
-		title: 'Full stack web developer',
-		degree: 'Engineering degree in computer science and applied mathematics',
-		pictureURL: './images/picture.jpg',
-		information: [
+		<style>
+			body
 			{
-				icon: 'envelope',
-				label: 'Email',
-				text: 'felix.veysseyre@gmail.com',
-			},
-			{
-				icon: 'institution',
-				label: 'Company',
-				text: 'Kitware, Inc.',
-			},
-			{
-				icon: 'map-marker',
-				label: 'Location',
-				text: 'Lyon, FR',
-			},
-			{
-				icon: 'globe',
-				label: 'Nationality',
-				text: 'French',
-			},
-			{
-				icon: 'birthday-cake',
-				label: 'Age',
-				text: '26',
-			},
-		],
-		networks: [
-			{
-				icon: 'envelope',
-				name: 'Email',
-				URL: 'mailto:felix.veysseyre@gmail.com',
-				tooltip: 'Send me an email'
-			},
-			{
-				icon: 'cloud-download',
-				name: 'Download resume',
-				URL: 'file/CV - Félix Veysseyre - EN.pdf',
-				tooltip: 'Download my resume'
-			},
-			{
-				icon: 'linkedin',
-				name: 'LinkedIn',
-				URL: 'https://fr.linkedin.com/in/felix-veysseyre',
-				tooltip: 'LinkedIn'
-			},
-			{
-				icon: 'github',
-				name: 'GitHub',
-				URL: 'https://github.com/felixveysseyre',
-				tooltip: 'GitHub'
-			},
-			{
-				icon: 'stack-overflow',
-				name: 'StackOverflow',
-				URL: 'https://stackoverflow.com/users/3483406/félix-veysseyre',
-				tooltip: 'StackOverflow'
-			},
-			{
-				icon: 'instagram',
-				name: 'Instagram',
-				URL: 'https://www.instagram.com/flx.vsr',
-				tooltip: 'Instagram'
-			},
-		]
-	};
+				margin: 0px;
+			}
 
-	var app = new Home.App(containerId, configuration);
-</script>
-</body>
+			#root
+			{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+
+		<!-- Javascript -->
+
+		<script src="./dist/App.js"></script>
+	</head>
+
+	<!-- Body -->
+
+	<body>
+		<div id="root"></div>
+
+		<script>
+			var containerId = 'root';
+
+			var configuration = {
+				coverImageURL: './images/cover.jpg',
+				fullName: 'Félix Veysseyre',
+				title: 'Full stack web developer',
+				degree: 'Engineering degree in computer science and applied mathematics',
+				pictureURL: './images/picture.jpg',
+				information: [
+					{
+						icon: 'envelope',
+						label: 'Email',
+						text: 'felix.veysseyre@gmail.com',
+					},
+					{
+						icon: 'institution',
+						label: 'Company',
+						text: 'Kitware, Inc.',
+					},
+					{
+						icon: 'map-marker',
+						label: 'Location',
+						text: 'Lyon, FR',
+					},
+					{
+						icon: 'globe',
+						label: 'Nationality',
+						text: 'French',
+					},
+					{
+						icon: 'birthday-cake',
+						label: 'Age',
+						text: '26',
+					},
+				],
+				networks: [
+					{
+						icon: 'envelope',
+						name: 'Email',
+						URL: 'mailto:felix.veysseyre@gmail.com',
+						tooltip: 'Send me an email'
+					},
+					{
+						icon: 'cloud-download',
+						name: 'Download resume',
+						URL: 'file/CV - Félix Veysseyre - EN.pdf',
+						tooltip: 'Download my resume'
+					},
+					{
+						icon: 'linkedin',
+						name: 'LinkedIn',
+						URL: 'https://fr.linkedin.com/in/felix-veysseyre',
+						tooltip: 'LinkedIn'
+					},
+					{
+						icon: 'github',
+						name: 'GitHub',
+						URL: 'https://github.com/felixveysseyre',
+						tooltip: 'GitHub'
+					},
+					{
+						icon: 'stack-overflow',
+						name: 'StackOverflow',
+						URL: 'https://stackoverflow.com/users/3483406/félix-veysseyre',
+						tooltip: 'StackOverflow'
+					},
+					{
+						icon: 'instagram',
+						name: 'Instagram',
+						URL: 'https://www.instagram.com/flx.vsr',
+						tooltip: 'Instagram'
+					},
+				],
+				resume: [
+					'Hello, my name is Félix VEYSSEYRE and I am a full stack web developer. I have an engineering degree in computer science with a major in applied mathematics.',
+					'I always loved to understand how things work, that is why I started engineering studies. Over time I fell in love with science and more particularly with mathematics where I could find the level of logic and strictness I like.',
+					'Nowadays, I like to design and implement web applications. It allows me to build complex projects easily, in a minimum of time and share them all around the world.',
+					'When I write some code, I pay a particular attention to four points: security, robustness, performance and maintainability.',
+					'I believe in science as a way to improve the human condition, and in open-source as a way to improve the technology.',
+				],
+				resumeFilePath: './files/CV - Felix Veysseyre - EN.pdf'
+			};
+
+			var app = new Home.App(containerId, configuration);
+		</script>
+	</body>
 </html>
