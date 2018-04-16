@@ -1,0 +1,109 @@
+/* Imports */
+
+@import '../../Root/Root.less';
+
+/* Variables */
+
+/* Style definition */
+
+.Button
+{
+	display: inline-block;
+
+	margin-right: 10px;
+	margin-left: 10px;
+
+	button
+	{
+		display: inline;
+		min-width: 110px;
+		height: 30px;
+		padding: 5px;
+		box-sizing: border-box;
+
+		color: @white;
+		font-family: @fontFamily;
+		font-size: @fontSizeMedium;
+		vertical-align: middle;
+		text-transform: uppercase;
+
+		cursor: pointer;
+		background-color: @cobalt;
+		border: none;
+		border-radius: 2px;
+		box-shadow: @boxShadow;
+		outline: none;
+
+		transition: all @transitionDuration;
+
+		&:disabled
+		{
+			cursor: not-allowed;
+
+			span
+			{
+				&::before
+				{
+					position: absolute;
+					width: 100%;
+					right: 0px;
+					top: 50%;
+					border-bottom: 2px solid @white;
+					content: '';
+				}
+			}
+		}
+
+		&:not(:disabled):hover
+		{
+			background-color: @lightCobalt;
+			box-shadow: none;
+		}
+
+		&.blue
+		{
+			background-color: @blue;
+
+			&:hover
+			{
+				background-color: @lightBlue;
+			}
+		}
+
+		&.green
+		{
+			background-color: @green;
+
+			&:hover
+			{
+				background-color: @lightGreen;
+			}
+		}
+
+		&.orange
+		{
+			background-color: @orange;
+
+			&:hover
+			{
+				background-color: @lightOrange;
+			}
+		}
+
+		&.red
+		{
+			background-color: @red;
+
+			&:hover
+			{
+				background-color: @lightRed;
+			}
+		}
+
+		span
+		{
+			position: relative;
+			padding: 0px 5px 0px 5px;
+		}
+	}
+}
