@@ -11,6 +11,7 @@ import Resume from './Resume/Resume.js';
 import TimeLine from './TimeLine/TimeLine.js';
 import TechnicalSkills from './TechnicalSkills/TechnicalSkills.js';
 import LanguageSkills from './LanguageSkills/LanguageSkills.js';
+import ExtraCurricularActivities from './ExtraCurricularActivities/ExtraCurricularActivities.js';
 
 import './Root.less';
 
@@ -116,6 +117,22 @@ export default class Root extends Component {
 			</Block>
 		);
 
+		/** ExtraCurricularActivities **/
+
+		const extraCurricularActivitiesSeparator = (
+			<SectionSeparator>
+				Extra-curricular activities
+			</SectionSeparator>
+		);
+
+		const extraCurricularActivities = (
+			<Block>
+				<ExtraCurricularActivities
+					extraCurricularActivities={this.props.configuration.data.extraCurricularActivities}
+				/>
+			</Block>
+		);
+
 		/** Main **/
 
 		const main = (
@@ -129,6 +146,8 @@ export default class Root extends Component {
 				{technicalSkills}
 				{languageSkillsSeparator}
 				{languageSkills}
+				{extraCurricularActivitiesSeparator}
+				{extraCurricularActivities}
 			</Main>
 		);
 
