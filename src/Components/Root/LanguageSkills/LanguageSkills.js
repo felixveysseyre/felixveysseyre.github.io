@@ -23,6 +23,9 @@ export default class LanguageSkills extends Component {
 				<tbody>
 					{
 						this.props.languageSkills.map((languageSkill, index) => {
+
+							/* Certification */
+
 							let certification = null;
 
 							if(languageSkill.certification)
@@ -33,6 +36,8 @@ export default class LanguageSkills extends Component {
 									</p>
 								);
 							}
+
+							/* Return */
 
 							return (
 								<tr key={index}>
