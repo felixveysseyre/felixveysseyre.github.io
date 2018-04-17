@@ -9,6 +9,7 @@ import Main from './Main/Main.js';
 import Information from './Information/Information.js';
 import Resume from './Resume/Resume.js';
 import TimeLine from './TimeLine/TimeLine.js';
+import TechnicalSkills from './TechnicalSkills/TechnicalSkills.js';
 
 import './Root.less';
 
@@ -82,6 +83,22 @@ export default class Root extends Component {
 			/>
 		);
 
+		/** TechnicalSkills **/
+
+		const technicalSkillsSeparator = (
+			<SectionSeparator>
+				Technical skills
+			</SectionSeparator>
+		);
+
+		const technicalSkills = (
+			<Block>
+				<TechnicalSkills
+					technicalSkills={this.props.configuration.data.technicalSkills}
+				/>
+			</Block>
+		);
+
 		/** Main **/
 
 		const main = (
@@ -91,6 +108,8 @@ export default class Root extends Component {
 				{resume}
 				{timeLineSeparator}
 				{timeLine}
+				{technicalSkillsSeparator}
+				{technicalSkills}
 			</Main>
 		);
 
