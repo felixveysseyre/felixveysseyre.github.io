@@ -108,7 +108,7 @@ export default class TechnicalSkills extends Component {
 		/* Element */
 
 		const element = (
-			<div className="Resume">
+			<div className="TechnicalSkills">
 				{summary}
 				{actions}
 			</div>
