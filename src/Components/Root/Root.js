@@ -10,6 +10,7 @@ import Information from './Information/Information.js';
 import Resume from './Resume/Resume.js';
 import TimeLine from './TimeLine/TimeLine.js';
 import TechnicalSkills from './TechnicalSkills/TechnicalSkills.js';
+import LanguageSkills from './LanguageSkills/LanguageSkills.js';
 
 import './Root.less';
 
@@ -99,6 +100,22 @@ export default class Root extends Component {
 			</Block>
 		);
 
+		/** LanguageSkills **/
+
+		const languageSkillsSeparator = (
+			<SectionSeparator>
+				Language skills
+			</SectionSeparator>
+		);
+
+		const languageSkills = (
+			<Block>
+				<LanguageSkills
+					languageSkills={this.props.configuration.data.languageSkills}
+				/>
+			</Block>
+		);
+
 		/** Main **/
 
 		const main = (
@@ -110,6 +127,8 @@ export default class Root extends Component {
 				{timeLine}
 				{technicalSkillsSeparator}
 				{technicalSkills}
+				{languageSkillsSeparator}
+				{languageSkills}
 			</Main>
 		);
 
