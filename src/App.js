@@ -10,6 +10,7 @@ export class App {
 		/* Configuration */
 
 		const defaultConfiguration = {
+			dateFormat: 'YYYY-MM-DD',
 		};
 
 		configuration = Object.assign({}, defaultConfiguration, configuration);

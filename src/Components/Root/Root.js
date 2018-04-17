@@ -8,6 +8,7 @@ import Cover from './Cover/Cover.js';
 import Main from './Main/Main.js';
 import Information from './Information/Information.js';
 import Resume from './Resume/Resume.js';
+import TimeLine from './TimeLine/TimeLine.js';
 
 import './Root.less';
 
@@ -28,7 +29,7 @@ export default class Root extends Component {
 
 		const cover = (
 			<Cover
-				imageURL={this.props.configuration.coverImageURL}
+				imageURL={this.props.configuration.data.coverImageURL}
 			/>
 		);
 
@@ -39,12 +40,12 @@ export default class Root extends Component {
 		const information = (
 			<Block>
 				<Information
-					fullName={this.props.configuration.fullName}
-					title={this.props.configuration.title}
-					degree={this.props.configuration.degree}
-					pictureURL={this.props.configuration.pictureURL}
-					information={this.props.configuration.information}
-					networks={this.props.configuration.networks}
+					fullName={this.props.configuration.data.fullName}
+					title={this.props.configuration.data.title}
+					degree={this.props.configuration.data.degree}
+					pictureURL={this.props.configuration.data.pictureURL}
+					information={this.props.configuration.data.information}
+					networks={this.props.configuration.data.networks}
 				/>
 			</Block>
 		);
@@ -60,10 +61,25 @@ export default class Root extends Component {
 		const resume = (
 			<Block>
 				<Resume
-					resume={this.props.configuration.resume}
-					resumeFilePath={this.props.configuration.resumeFilePath}
+					resume={this.props.configuration.data.resume}
+					resumeFilePath={this.props.configuration.data.resumeFilePath}
 				/>
 			</Block>
+		);
+
+		/** TimeLine **/
+
+		const timeLineSeparator = (
+			<SectionSeparator>
+				Education and experiences
+			</SectionSeparator>
+		);
+
+		const timeLine = (
+			<TimeLine
+				timeLine={this.props.configuration.data.timeLine}
+				dateFormat={this.props.configuration.dateFormat}
+			/>
 		);
 
 		/** Main **/
@@ -73,6 +89,8 @@ export default class Root extends Component {
 				{information}
 				{resumeSeparator}
 				{resume}
+				{timeLineSeparator}
+				{timeLine}
 			</Main>
 		);
 

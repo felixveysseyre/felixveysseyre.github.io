@@ -44,84 +44,174 @@
 			var containerId = 'root';
 
 			var configuration = {
-				coverImageURL: './images/cover.jpg',
-				fullName: 'Félix Veysseyre',
-				title: 'Full stack web developer',
-				degree: 'Engineering degree in computer science and applied mathematics',
-				pictureURL: './images/picture.jpg',
-				information: [
-					{
-						icon: 'envelope',
-						label: 'Email',
-						text: 'felix.veysseyre@gmail.com',
-					},
-					{
-						icon: 'institution',
-						label: 'Company',
-						text: 'Kitware, Inc.',
-					},
-					{
-						icon: 'map-marker',
-						label: 'Location',
-						text: 'Lyon, FR',
-					},
-					{
-						icon: 'globe',
-						label: 'Nationality',
-						text: 'French',
-					},
-					{
-						icon: 'birthday-cake',
-						label: 'Age',
-						text: '26',
-					},
-				],
-				networks: [
-					{
-						icon: 'envelope',
-						name: 'Email',
-						URL: 'mailto:felix.veysseyre@gmail.com',
-						tooltip: 'Send me an email'
-					},
-					{
-						icon: 'cloud-download',
-						name: 'Download resume',
-						URL: 'file/CV - Félix Veysseyre - EN.pdf',
-						tooltip: 'Download my resume'
-					},
-					{
-						icon: 'linkedin',
-						name: 'LinkedIn',
-						URL: 'https://fr.linkedin.com/in/felix-veysseyre',
-						tooltip: 'LinkedIn'
-					},
-					{
-						icon: 'github',
-						name: 'GitHub',
-						URL: 'https://github.com/felixveysseyre',
-						tooltip: 'GitHub'
-					},
-					{
-						icon: 'stack-overflow',
-						name: 'StackOverflow',
-						URL: 'https://stackoverflow.com/users/3483406/félix-veysseyre',
-						tooltip: 'StackOverflow'
-					},
-					{
-						icon: 'instagram',
-						name: 'Instagram',
-						URL: 'https://www.instagram.com/flx.vsr',
-						tooltip: 'Instagram'
-					},
-				],
-				resume: [
-					'Hello, my name is Félix VEYSSEYRE and I am a full stack web developer. I have an engineering degree in computer science with a major in applied mathematics.',
-					'I always loved to understand how things work, that is why I started engineering studies. Over time I fell in love with science and more particularly with mathematics where I could find the level of logic and strictness I like.',
-					'Nowadays, I like to design and implement web applications. It allows me to build complex projects easily, in a minimum of time and share them all around the world.',
-					'When I write some code, I pay a particular attention to four points: security, robustness, performance and maintainability.',
-					'I believe in science as a way to improve the human condition, and in open-source as a way to improve the technology.',
-				],
-				resumeFilePath: './files/CV - Felix Veysseyre - EN.pdf'
+				dateFormat: 'DD/MM/YYYY',
+				data: {
+					coverImageURL: './images/cover.jpg',
+					fullName: 'Félix Veysseyre',
+					title: 'Full stack web developer',
+					degree: 'Engineering degree in computer science and applied mathematics',
+					pictureURL: './images/picture.jpg',
+					information: [
+						{
+							icon: 'envelope',
+							label: 'Email',
+							text: 'felix.veysseyre@gmail.com',
+						},
+						{
+							icon: 'institution',
+							label: 'Company',
+							text: 'Kitware, Inc.',
+						},
+						{
+							icon: 'map-marker',
+							label: 'Location',
+							text: 'Lyon, FR',
+						},
+						{
+							icon: 'globe',
+							label: 'Nationality',
+							text: 'French',
+						},
+						{
+							icon: 'birthday-cake',
+							label: 'Age',
+							text: '26',
+						},
+					],
+					networks: [
+						{
+							icon: 'envelope',
+							name: 'Email',
+							URL: 'mailto:felix.veysseyre@gmail.com',
+							tooltip: 'Send me an email'
+						},
+						{
+							icon: 'cloud-download',
+							name: 'Download resume',
+							URL: 'file/CV - Félix Veysseyre - EN.pdf',
+							tooltip: 'Download my resume'
+						},
+						{
+							icon: 'linkedin',
+							name: 'LinkedIn',
+							URL: 'https://fr.linkedin.com/in/felix-veysseyre',
+							tooltip: 'LinkedIn'
+						},
+						{
+							icon: 'github',
+							name: 'GitHub',
+							URL: 'https://github.com/felixveysseyre',
+							tooltip: 'GitHub'
+						},
+						{
+							icon: 'stack-overflow',
+							name: 'StackOverflow',
+							URL: 'https://stackoverflow.com/users/3483406/félix-veysseyre',
+							tooltip: 'StackOverflow'
+						},
+						{
+							icon: 'instagram',
+							name: 'Instagram',
+							URL: 'https://www.instagram.com/flx.vsr',
+							tooltip: 'Instagram'
+						},
+					],
+					resume: [
+						'Hello, my name is Félix VEYSSEYRE and I am a full stack web developer. I have an engineering degree in computer science with a major in applied mathematics.',
+						'I always loved to understand how things work, that is why I started engineering studies. Over time I fell in love with science and more particularly with mathematics where I could find the level of logic and strictness I like.',
+						'Nowadays, I like to design and implement web applications. It allows me to build complex projects easily, in a minimum of time and share them all around the world.',
+						'When I write some code, I pay a particular attention to four points: security, robustness, performance and maintainability.',
+						'I believe in science as a way to improve the human condition, and in open-source as a way to improve the technology.',
+					],
+					resumeFilePath: './files/CV - Felix Veysseyre - EN.pdf',
+					timeLine: [
+						{
+							type: 'experience',
+							start: '2015-10-01',
+							end: null,
+							name: 'Software engineer',
+							location: 'Lyon, FR',
+							URL: 'https://kitware.com',
+							description: 'Full stack web developer in charge of all web projects as well as the communication with related customers. Editor of many proposals.',
+
+							company: 'Kitware, Inc.',
+							projects: [
+								'Conception of a web application, allowing users to view and interact in real time with scientific simulations, using distributed remote rendering',
+								'Conception and development of a modular content management web application. Designed to provide high performance, high availability, to be scalable and secure',
+								'Conception and development of a image web viewer handling very large images with multiple dimensions (space, time, colors channels, etc.)',
+								'Conception and development of a web application, allowing users to view and interact in real time with MATLAB figures',
+								'Conception and development of an online PDF generator able to create PDF files from custom templates and data supplied manually',
+								'Conception and development of an online team task manager able to handle many types of tasks, teams and various constrains',
+							],
+						},
+						{
+							type: 'experience',
+							start: '2014-09-15',
+							end: '2015-09-15',
+							name: 'Software engineer junior',
+							location: 'Lyon, FR',
+							URL: 'https://orange.com',
+							description: 'Full stack web developer in charge of his final year internship project.',
+
+							company: 'Orange',
+							projects: [
+								'Conception and development of a distributed and scalable log analyzing web application. Designed to allow real-time browsing, graphing and detection of unusual behaviors from the logs of a cluster of servers',
+							],
+						},
+						{
+							type: 'education',
+							start: '2014-09-15',
+							end: '2015-07-01',
+							name: 'Engineering cycle',
+							location: 'Lyon, FR',
+							URL: 'http://www.cpe.fr/',
+							description: 'Fifth year of higher education (theory and practice) in Electronic, Computer sciences and Telecommunication with major in Mathematics and Image Processing. Achievement of a scientific research project on motion analysis, applied to heart tracking',
+
+							school: 'CPE Lyon',
+							note: null,
+						},
+						{
+							type: 'experience',
+							start: '2013-07-01',
+							end: '2014-07-01',
+							name: 'Software engineer junior',
+							location: 'Chapel Hill, USA',
+							URL: 'https://kitware.com',
+							description: 'Gap year in computer science, data analysis and data visualization.',
+
+							company: 'Kitware, Inc.',
+							projects: [
+								'Conception and development of a web application allowing the analysis of several mailing lists and its users',
+								'Development in a collaborative pointcloud visualization and managing web application',
+								'Conception and development of the processing workflow of pediatric airways imaging data',
+							],
+						},
+						{
+							type: 'education',
+							start: '2011-09-01',
+							end: '2013-07-01',
+							name: 'Engineering cycle',
+							location: 'Lyon, FR',
+							URL: 'http://www.cpe.fr',
+							description: 'Third and fourth year of higher education (theory and practice) in Electronic, Computer sciences and Telecommunication with taking of optional modules in graphs and algorithms, optimization technics and modeling technics',
+
+							school: 'CPE Lyon',
+							note: 'Scientific Award of Excellence',
+						},
+						{
+							type: 'education',
+							start: '2009-09-01',
+							end: '2011-07-01',
+							name: 'Preparatory class',
+							location: 'Lyon, FR',
+							URL: 'http://www.prepa-cpe.fr',
+							description: 'First and second year of higher education (theory and practice) in Mathematics, Physics, Engineering Sciences and languages',
+
+							school: 'Preparatory class for CPE Lyon',
+							note: null,
+						},
+					],
+				},
 			};
 
 			var app = new Home.App(containerId, configuration);
