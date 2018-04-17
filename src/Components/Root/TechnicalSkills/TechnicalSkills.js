@@ -27,13 +27,13 @@ export default class TechnicalSkills extends Component {
 			<table>
 				<tbody>
 					{
-						this.props.technicalSkills.map((technicalSkill, index) => {
-							if(technicalSkill.skills.current.length || (this.state.nextSkillDisplayStatus && technicalSkill.skills.next.length))
+						this.props.technicalSkills.map((technicalSkillValue, technicalSkillIndex) => {
+							if(technicalSkillValue.skills.current.length || (this.state.nextSkillDisplayStatus && technicalSkillValue.skills.next.length))
 							{
 
 								/* Current skills */
 
-								const currentSkills = technicalSkill.skills.current.map((skillValue, skillIndex) => {
+								const currentSkills = technicalSkillValue.skills.current.map((skillValue, skillIndex) => {
 									return (
 										<li
 											key={skillIndex}
@@ -50,7 +50,7 @@ export default class TechnicalSkills extends Component {
 
 								if(this.state.nextSkillDisplayStatus)
 								{
-									nextSkills = technicalSkill.skills.next.map((skillValue, skillIndex) => {
+									nextSkills = technicalSkillValue.skills.next.map((skillValue, skillIndex) => {
 										return (
 											<li
 												key={skillIndex}
@@ -65,9 +65,9 @@ export default class TechnicalSkills extends Component {
 								/* Return */
 
 								return (
-									<tr key={index}>
+									<tr key={technicalSkillIndex}>
 										<td className="label">
-											{technicalSkill.name}
+											{technicalSkillValue.name}
 										</td>
 										<td className="list">
 											<ul>

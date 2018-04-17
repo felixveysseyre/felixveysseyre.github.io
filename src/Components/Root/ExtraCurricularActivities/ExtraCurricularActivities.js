@@ -22,14 +22,14 @@ export default class ExtraCurricularActivities extends Component {
 			<table>
 				<tbody>
 					{
-						this.props.extraCurricularActivities.map((extraCurricularActivity, index) => {
+						this.props.extraCurricularActivities.map((extraCurricularActivityValue, extraCurricularActivityIndex) => {
 							return (
-								<tr key={index}>
+								<tr key={extraCurricularActivityIndex}>
 									<td className="label">
-										{extraCurricularActivity.name}
+										{extraCurricularActivityValue.name}
 									</td>
 									<td className="description">
-										{extraCurricularActivity.description}
+										{extraCurricularActivityValue.description}
 									</td>
 								</tr>
 							);

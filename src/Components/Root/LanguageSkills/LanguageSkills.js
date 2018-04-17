@@ -22,17 +22,17 @@ export default class LanguageSkills extends Component {
 			<table>
 				<tbody>
 					{
-						this.props.languageSkills.map((languageSkill, index) => {
+						this.props.languageSkills.map((languageSkillValue, languageSkillValueIndex) => {
 
 							/* Certification */
 
 							let certification = null;
 
-							if(languageSkill.certification)
+							if(languageSkillValue.certification)
 							{
 								certification = (
 									<p className="certification">
-										{languageSkill.certification}
+										{languageSkillValue.certification}
 									</p>
 								);
 							}
@@ -40,13 +40,13 @@ export default class LanguageSkills extends Component {
 							/* Return */
 
 							return (
-								<tr key={index}>
+								<tr key={languageSkillValueIndex}>
 									<td className="label">
-										{languageSkill.name}
+										{languageSkillValue.name}
 									</td>
 									<td className="information">
 										<p className="level">
-											{languageSkill.level}
+											{languageSkillValue.level}
 										</p>
 										{certification}
 									</td>

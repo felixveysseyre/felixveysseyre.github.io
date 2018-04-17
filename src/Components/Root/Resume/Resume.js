@@ -23,10 +23,10 @@ export default class Resume extends Component {
 		const summary = (
 			<div>
 				{
-					this.props.resume.map((resume, index) => {
+					this.props.resume.map((resumeValue, resumeIndex) => {
 						return (
-							<p key={index}>
-								{resume}
+							<p key={resumeIndex}>
+								{resumeValue}
 							</p>
 						);
 					})

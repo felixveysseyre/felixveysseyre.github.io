@@ -126,10 +126,10 @@ export default class TimeLine extends Component {
 					</p>
 					<ul>
 						{
-							experienceTimeLine.projects.map((project, index) => {
+							experienceTimeLine.projects.map((projectValue, projectIndex) => {
 								return (
-									<li key={index}>
-										{project}
+									<li key={projectIndex}>
+										{projectValue}
 									</li>
 								);
 							})
@@ -146,15 +146,15 @@ export default class TimeLine extends Component {
 				<table>
 					<tbody>
 						{
-							this.props.timeLine.map((timeLine, index) => {
+							this.props.timeLine.map((timeLineValue, timeLineIndex) => {
 								let leftColumn = null;
 								let rightColumn = null;
 
-								if(timeLine.type === this.timeLineTypes.education)
+								if(timeLineValue.type === this.timeLineTypes.education)
 								{
 									leftColumn = (
 										<td className="left">
-											{generateEducationBlock(timeLine)}
+											{generateEducationBlock(timeLineValue)}
 											<div className="icon">
 												<Icon
 													name="graduation-cap"
@@ -167,11 +167,11 @@ export default class TimeLine extends Component {
 										<td className="right"/>
 									);
 								}
-								else if(timeLine.type === this.timeLineTypes.experience)
+								else if(timeLineValue.type === this.timeLineTypes.experience)
 								{
 									rightColumn = (
 										<td className="right">
-											{generateExperienceBlock(timeLine)}
+											{generateExperienceBlock(timeLineValue)}
 											<div className="icon">
 												<Icon
 													name="institution"
@@ -186,7 +186,7 @@ export default class TimeLine extends Component {
 								}
 
 								return (
-									<tr key={index}>
+									<tr key={timeLineIndex}>
 										{leftColumn}
 										{rightColumn}
 									</tr>

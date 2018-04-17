@@ -35,22 +35,22 @@ export default class Information extends Component {
 								</p>
 								<ul>
 									{
-										this.props.information.map((information, index) => {
+										this.props.information.map((informationValue, informationIndex) => {
 											return (
-												<li key={index}>
+												<li key={informationIndex}>
 													<span className="label">
 														<Icon
 															className="icon"
-															name={information.icon}
+															name={informationValue.icon}
 															fixedWidth={true}
 														/>
-														{information.label}
+														{informationValue.label}
 													</span>
 													<span className="text">
-														{information.text}
+														{informationValue.text}
 													</span>
 												</li>
-											)
+											);
 										})
 									}
 								</ul>
@@ -69,18 +69,18 @@ export default class Information extends Component {
 				</table>
 				<ul className="networks">
 					{
-						this.props.networks.map((network, index) => {
+						this.props.networks.map((networkValue, networkIndex) => {
 							return (
 								<li
-									key={index}
-									tooltip={network.tooltip}
+									key={networkIndex}
+									tooltip={networkValue.tooltip}
 								>
 									<a
-										href={network.URL}
+										href={networkValue.URL}
 										target="_blank"
 									>
 										<Icon
-											name={network.icon}
+											name={networkValue.icon}
 										/>
 									</a>
 								</li>
