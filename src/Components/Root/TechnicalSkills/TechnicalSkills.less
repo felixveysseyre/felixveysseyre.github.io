@@ -43,7 +43,13 @@
 							margin: 2.5px;
 							color: @white;
 							border-radius: 50px;
-							box-shadow: @boxShadow;
+							box-shadow: @lightBoxShadow;
+							transition: all @transitionDuration;
+
+							&:hover
+							{
+								box-shadow: none;
+							}
 
 							&.current
 							{
